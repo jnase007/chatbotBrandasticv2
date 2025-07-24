@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandastic Chatbot - Integration Instructions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 16px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 16px 0;
+        }
+        h1, h2 {
+            color: #2563eb;
+        }
+        .step {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Brandastic Chatbot Integration Guide</h1>
+    
+    <p>This guide will help your developer integrate the Brandastic chatbot into your WordPress website.</p>
+    
+    <h2>📋 Quick Integration (Recommended)</h2>
+    
+    <div class="step">
+        <h3>Step 1: Add the Embed Script</h3>
+        <p>Add this single line of code to your WordPress footer (before the closing <code>&lt;/body&gt;</code> tag):</p>
+        
+        <div class="code-block">
+            <code>&lt;script src="https://your-chatbot-domain.com/embed.js" async&gt;&lt;/script&gt;</code>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Important:</strong> Replace <code class="highlight">https://your-chatbot-domain.com</code> with your actual chatbot hosting URL.
+        </div>
+    </div>
+    
+    <h2>🔧 WordPress Integration Methods</h2>
+    
+    <h3>Method 1: Theme Footer (Recommended)</h3>
+    <p>Add to your theme's <code>footer.php</code> file before <code>&lt;/body&gt;</code>:</p>
+    
+    <div class="code-block">
+        <code>&lt;!-- Brandastic Chatbot --&gt;<br>
+&lt;script&gt;<br>
+(function() {<br>
+&nbsp;&nbsp;var script = document.createElement('script');<br>
+&nbsp;&nbsp;script.src = 'https://your-chatbot-domain.com/embed.js';<br>
+&nbsp;&nbsp;script.async = true;<br>
+&nbsp;&nbsp;document.head.appendChild(script);<br>
+})();<br>
+&lt;/script&gt;</code>
+    </div>
+    
+    <h3>Method 2: WordPress Functions.php</h3>
+    <p>Add this to your theme's <code>functions.php</code> file:</p>
+    
+    <div class="code-block">
+        <code>// Add Brandastic Chatbot<br>
+function add_brandastic_chatbot() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="https://your-chatbot-domain.com/embed.js" async&gt;&lt;/script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;?php<br>
+}<br>
+add_action('wp_footer', 'add_brandastic_chatbot');</code>
+    </div>
+    
+    <h3>Method 3: WordPress Plugin</h3>
+    <p>Create a simple plugin file <code>brandastic-chatbot.php</code>:</p>
+    
+    <div class="code-block">
+        <code>&lt;?php<br>
+/*<br>
+Plugin Name: Brandastic Chatbot<br>
+Description: Adds the Brandastic AI chatbot to your website<br>
+Version: 1.0<br>
+*/<br><br>
+function brandastic_chatbot_script() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wp_enqueue_script(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'brandastic-chatbot',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'https://your-chatbot-domain.com/embed.js',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'1.0',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;);<br>
+}<br>
+add_action('wp_enqueue_scripts', 'brandastic_chatbot_script');</code>
+    </div>
+    
+    <h2>🌐 Hosting Setup Required</h2>
+    
+    <div class="warning">
+        <h3>⚠️ Before Integration</h3>
+        <p>You need to:</p>
+        <ol>
+            <li><strong>Deploy your chatbot</strong> to a hosting service (Railway, Netlify, etc.)</li>
+            <li><strong>Get your chatbot URL</strong> (e.g., https://brandastic-chatbot.railway.app)</li>
+            <li><strong>Update the embed script</strong> with your actual URL</li>
+            <li><strong>Test the integration</strong> on a staging site first</li>
+        </ol>
+    </div>
+    
+    <h2>📱 Features Included</h2>
+    
+    <div class="success">
+        <h3>✅ What the Chatbot Includes:</h3>
+        <ul>
+            <li><strong>AI-Powered Conversations</strong> - Natural language understanding</li>
+            <li><strong>Service Information</strong> - Answers about your services and pricing</li>
+            <li><strong>Booking Integration</strong> - Direct calendar scheduling</li>
+            <li><strong>Email Notifications</strong> - Form submissions sent to info@brandastic.com</li>
+            <li><strong>Mobile Responsive</strong> - Works on all devices</li>
+            <li><strong>Professional Design</strong> - Matches your brand aesthetic</li>
+        </ul>
+    </div>
+    
+    <h2>🎨 Customization Options</h2>
+    
+    <p>The chatbot can be customized by modifying the embed script:</p>
+    
+    <div class="code-block">
+        <code>&lt;script&gt;<br>
+// Customize chatbot position<br>
+window.BrandasticChatbotConfig = {<br>
+&nbsp;&nbsp;position: 'bottom-right', // bottom-left, bottom-right<br>
+&nbsp;&nbsp;primaryColor: '#2563eb',<br>
+&nbsp;&nbsp;accentColor: '#0d9488'<br>
+};<br>
+&lt;/script&gt;<br>
+&lt;script src="https://your-chatbot-domain.com/embed.js" async&gt;&lt;/script&gt;</code>
+    </div>
+    
+    <h2>🔍 Testing Checklist</h2>
+    
+    <div class="step">
+        <h3>Before Going Live:</h3>
+        <ol>
+            <li>✅ Test on staging/development site first</li>
+            <li>✅ Verify chatbot appears in bottom-right corner</li>
+            <li>✅ Test conversation flow</li>
+            <li>✅ Test booking form submission</li>
+            <li>✅ Confirm emails are received at info@brandastic.com</li>
+            <li>✅ Test on mobile devices</li>
+            <li>✅ Check page load speed impact</li>
+        </ol>
+    </div>
+    
+    <h2>📞 Support</h2>
+    
+    <p>If you need help with integration:</p>
+    <ul>
+        <li><strong>Technical Issues:</strong> Check browser console for errors</li>
+        <li><strong>Email Problems:</strong> Verify backend email configuration</li>
+        <li><strong>Styling Issues:</strong> CSS conflicts with your theme</li>
+    </ul>
+    
+    <div class="success">
+        <h3>🚀 Ready to Deploy?</h3>
+        <p>Once you have your chatbot hosted and the URL updated in the embed script, your developer can add it to brandastic.com in just a few minutes!</p>
+    </div>
+</body>
+</html>
