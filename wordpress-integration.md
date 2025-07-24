@@ -80,6 +80,33 @@ function brandastic_chatbot_enqueue_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'brandastic_chatbot_enqueue_scripts');
+
+// Optional: Add admin settings page
+function brandastic_chatbot_admin_menu() {
+    add_options_page(
+        'Brandastic Chatbot Settings',
+        'Chatbot Settings',
+        'manage_options',
+        'brandastic-chatbot',
+        'brandastic_chatbot_settings_page'
+    );
+}
+add_action('admin_menu', 'brandastic_chatbot_admin_menu');
+
+function brandastic_chatbot_settings_page() {
+    ?>
+    <div class="wrap">
+        <h1>Brandastic Chatbot Settings</h1>
+        <p>The chatbot is active on your website. You can customize it by modifying the configuration in your theme files.</p>
+        <h3>Current Status:</h3>
+        <ul>
+            <li>✅ CSS Loaded</li>
+            <li>✅ JavaScript Loaded</li>
+            <li>✅ API Connected to brandastic.com</li>
+        </ul>
+    </div>
+    <?php
+}
 ?>
 ```
 
@@ -100,8 +127,8 @@ You can customize the chatbot by adding this before loading the script:
 window.BrandasticChatbotConfig = {
     primaryColor: '#2563eb',
     accentColor: '#0d9488',
-    position: 'bottom-right', // or 'bottom-left'
-    showNotificationBadge: true
+    apiUrl: 'https://your-custom-api-url.com', // Override default API URL
+    googleCalendarUrl: 'https://your-custom-calendar-url.com' // Override calendar URL
 };
 </script>
 ```

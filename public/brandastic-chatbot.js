@@ -3,7 +3,7 @@
   
   // Configuration
   const CHATBOT_CONFIG = {
-    apiUrl: 'https://brandastic.com/chatbot-api', // Your brandastic.com server API endpoint
+    apiUrl: 'https://brandastic.com/chatbot-api',
     containerId: 'brandastic-chatbot-container',
     version: '1.0.0',
     googleCalendarUrl: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy'
@@ -243,6 +243,20 @@
       return div.innerHTML;
     },
     
+    showNotification: function() {
+      const badge = document.querySelector('.brandastic-notification-badge');
+      if (badge && !this.isOpen) {
+        badge.style.display = 'block';
+      }
+    },
+    
+    hideNotification: function() {
+      const badge = document.querySelector('.brandastic-notification-badge');
+      if (badge) {
+        badge.style.display = 'none';
+      }
+    },
+    
     // Public API methods
     open: function() {
       if (!this.isOpen) {
@@ -262,15 +276,35 @@
         messageInput.value = message;
         this.sendMessage();
       }
+    },
+    
+    // Configuration override
+    configure: function(options) {
+      if (options.apiUrl) CHATBOT_CONFIG.apiUrl = options.apiUrl;
+      if (options.googleCalendarUrl) CHATBOT_CONFIG.googleCalendarUrl = options.googleCalendarUrl;
+      if (options.primaryColor) {
+        document.documentElement.style.setProperty('--brandastic-primary', options.primaryColor);
+      }
+      if (options.accentColor) {
+        document.documentElement.style.setProperty('--brandastic-accent', options.accentColor);
+      }
     }
   };
 
   // Auto-initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
+      // Check for configuration
+      if (window.BrandasticChatbotConfig) {
+        window.BrandasticChatbot.configure(window.BrandasticChatbotConfig);
+      }
       window.BrandasticChatbot.init();
     });
   } else {
+    // Check for configuration
+    if (window.BrandasticChatbotConfig) {
+      window.BrandasticChatbot.configure(window.BrandasticChatbotConfig);
+    }
     window.BrandasticChatbot.init();
   }
 })();

@@ -20,6 +20,7 @@
   justify-content: center;
   transition: all 0.3s ease;
   color: white;
+  position: relative;
 }
 
 .brandastic-chat-button:hover {
@@ -29,6 +30,32 @@
 
 .brandastic-chat-button.open {
   background: #ef4444;
+}
+
+.brandastic-notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: brandastic-pulse 2s infinite;
+}
+
+@keyframes brandastic-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .brandastic-chat-window {
@@ -43,10 +70,22 @@
   display: none;
   flex-direction: column;
   overflow: hidden;
+  animation: brandastic-slide-up 0.3s ease-out;
 }
 
 .brandastic-chat-window.open {
   display: flex;
+}
+
+@keyframes brandastic-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .brandastic-chat-header {
@@ -269,47 +308,4 @@
 .brandastic-quick-action:focus {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
-}
-
-/* Animation for chat window */
-.brandastic-chat-window {
-  animation: brandastic-slide-up 0.3s ease-out;
-}
-
-@keyframes brandastic-slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Notification badge */
-.brandastic-notification-badge {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 12px;
-  height: 12px;
-  background: #ef4444;
-  border-radius: 50%;
-  animation: brandastic-pulse 2s infinite;
-}
-
-@keyframes brandastic-pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
