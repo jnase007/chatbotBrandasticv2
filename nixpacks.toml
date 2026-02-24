@@ -1,0 +1,12 @@
+[phases.setup]
+aptPkgs = []
+nixPkgs = []
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = []
+
+[start]
+cmd = "node server/index.js"
