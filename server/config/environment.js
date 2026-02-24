@@ -8,7 +8,7 @@ const requiredEnvVars = ['OPENAI_API_KEY'];
 const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar] || process.env[envVar] === 'your_openai_api_key_here');
 
 if (missingEnvVars.length > 0) {
-  console.warn(`⚠️  Missing required environment variables: ${missingEnvVars.join(', ')}`);
+  console.warn(`‚ö†Ô∏è  Missing required environment variables: ${missingEnvVars.join(', ')}`);
   console.warn('Please check your .env file and ensure all required variables are set.');
 }
 
@@ -20,7 +20,8 @@ export const config = {
   // OpenAI configuration
   openai: {
     apiKey: process.env.OPENAI_API_KEY,
-    model: 'gpt-4o-mini',
+    baseURL: process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1',
+    model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
     maxTokens: 400,
     temperature: 0.7
   },
@@ -50,8 +51,8 @@ export const config = {
 };
 
 // Validate OpenAI API key format
-if (config.openai.apiKey && !config.openai.apiKey.startsWith('sk-')) {
-  console.warn('⚠️  OpenAI API key should start with "sk-". Please verify your API key.');
+if (config.openai.apiKey && !config.openai.apiKey.startsWith('sk-') && !config.openai.apiKey.startsWith('xai-')) {
+  console.warn('‚ö†Ô∏è  API key format not recognized. Please verify your API key.');
 }
 
 export default config;
