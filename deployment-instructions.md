@@ -66,7 +66,7 @@ RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=50
 
 # Google Calendar
-GOOGLE_CALENDAR_URL=https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy
+GOOGLE_CALENDAR_URL=https://calendar.app.google/dEeGiuDU7yuGVQJW8
 
 # Features
 ENABLE_CONVERSATION_LOGGING=true

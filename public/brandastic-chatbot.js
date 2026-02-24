@@ -6,7 +6,7 @@
     apiUrl: 'https://brandastic.com/chatbot-api',
     containerId: 'brandastic-chatbot-container',
     version: '1.0.0',
-    googleCalendarUrl: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy'
+    googleCalendarUrl: 'https://calendar.app.google/dEeGiuDU7yuGVQJW8'
   };
 
   // Prevent multiple initializations

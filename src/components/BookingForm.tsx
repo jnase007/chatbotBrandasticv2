@@ -51,7 +51,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, onComplete })
   };
 
   const openGoogleCalendar = () => {
-    window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy', '_blank');
+    window.open('https://calendar.app.google/dEeGiuDU7yuGVQJW8', '_blank');
     onComplete();
   };
 

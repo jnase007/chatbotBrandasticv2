@@ -23,8 +23,7 @@ router.post('/schedule', validateBookingInput, async (req, res) => {
     res.status(500).json({
       error: 'Unable to process booking request. Please try again or contact us directly.',
       contactInfo: {
-        email: 'hello@brandastic.com',
-        phone: '(555) 123-4567'
+        email: 'hello@brandastic.com'
       }
     });
   }

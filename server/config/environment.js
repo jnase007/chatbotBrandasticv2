@@ -20,7 +20,7 @@ export const config = {
   // OpenAI configuration
   openai: {
     apiKey: process.env.OPENAI_API_KEY,
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4o-mini',
     maxTokens: 400,
     temperature: 0.7
   },
@@ -39,7 +39,7 @@ export const config = {
   
   // Google Calendar
   googleCalendar: {
-    bookingUrl: process.env.GOOGLE_CALENDAR_URL || 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy'
+    bookingUrl: process.env.GOOGLE_CALENDAR_URL || 'https://calendar.app.google/dEeGiuDU7yuGVQJW8'
   },
   
   // Feature flags

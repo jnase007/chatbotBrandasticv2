@@ -398,7 +398,7 @@
         let content = `<div class="brandastic-message-content">${text}`;
         
         if (isBot && suggestedAction === 'book_call') {
-          content += `<br><button class="brandastic-book-button" onclick="window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3p_NsSPhRdrtKfXdzbe4Rx2wLyLmAgpRDg-QNcXIdg-91YlzqF7gF-_zuUKmppHexFZzsGvoyy', '_blank')">📅 Book a Call</button>`;
+          content += `<br><button class="brandastic-book-button" onclick="window.open('https://calendar.app.google/dEeGiuDU7yuGVQJW8', '_blank')">📅 Book a Call</button>`;
         }
         
         content += '</div>';

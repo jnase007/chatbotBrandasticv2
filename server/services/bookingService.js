@@ -53,7 +53,7 @@ export class BookingService {
       
       return {
         nextAvailable: tomorrow.toISOString(),
-        timezone: 'America/New_York',
+        timezone: 'America/Los_Angeles',
         businessHours: {
           monday: ['9:00 AM', '5:00 PM'],
           tuesday: ['9:00 AM', '5:00 PM'],
