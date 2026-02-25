@@ -2,7 +2,7 @@
 #brandastic-chatbot-container {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 9999;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -29,7 +29,7 @@
 }
 
 .brandastic-chat-button.open {
-  background: #ef4444;
+  background: #10b981;
 }
 
 .brandastic-notification-badge {
@@ -61,7 +61,7 @@
 .brandastic-chat-window {
   position: absolute;
   bottom: 70px;
-  left: 0;
+  right: 0;
   width: 380px;
   height: 500px;
   background: white;
@@ -91,10 +91,10 @@
 .brandastic-chat-header {
   background: linear-gradient(135deg, #2563eb 0%, #0d9488 100%);
   color: white;
-  padding: 16px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .brandastic-chat-avatar {
@@ -292,7 +292,7 @@
   
   #brandastic-chatbot-container {
     bottom: 15px;
-    left: 15px;
+    right: 15px;
   }
   
   .brandastic-chat-button {
