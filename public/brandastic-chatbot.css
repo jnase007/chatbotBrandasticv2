@@ -283,11 +283,12 @@
 /* Mobile Responsive */
 @media (max-width: 640px) {
   .brandastic-chat-window {
-    width: calc(100vw - 40px);
-    height: calc(100vh - 100px);
-    bottom: 70px;
-    right: 20px;
-    left: 20px;
+    position: fixed;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 120px);
+    bottom: 80px;
+    right: 10px;
+    left: 10px;
   }
   
   #brandastic-chatbot-container {
