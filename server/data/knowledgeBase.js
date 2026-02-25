@@ -2,6 +2,13 @@ export const brandkDb = {
   services: `
 BRANDASTIC SERVICES OVERVIEW:
 
+CONTACT INFORMATION:
+- Phone: (949) 617-2731
+- Email: info@brandastic.com
+- Website: brandastic.com
+- Location: Orange County, California
+- Book a Call: https://calendar.app.google/dEeGiuDU7yuGVQJW8
+
 DIGITAL MARKETING - Starting at $2,900/mo
 - Search Engine Marketing (PPC, Google Ads, Facebook, Instagram)
 - Social Media Marketing & Management
@@ -64,6 +71,12 @@ INDUSTRIES WE SERVE:
   },
 
   faqs: {
+    "phone number": "You can reach us at (949) 617-2731. We are based in Orange County, California. You can also email us at info@brandastic.com or book a call at https://calendar.app.google/dEeGiuDU7yuGVQJW8",
+    
+    "contact": "Phone: (949) 617-2731, Email: info@brandastic.com. Book a consultation: https://calendar.app.google/dEeGiuDU7yuGVQJW8",
+    
+    "email": "Our email is info@brandastic.com. Call us at (949) 617-2731.",
+    
     "what services do you offer": "We help businesses grow through three main areas: Digital Marketing (search engine marketing, social media, content marketing), Web Development (custom websites, e-commerce, optimization), and Brand Development (strategy, design, photography). What type of growth are you looking to achieve for your business?",
     
     "digital marketing": "Our digital marketing services include search engine marketing, social media management, programmatic advertising, and content marketing. What's your biggest challenge in attracting new customers right now? Are you currently doing any marketing, or would this be a fresh start?",
