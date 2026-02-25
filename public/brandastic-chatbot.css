@@ -2,7 +2,7 @@
 #brandastic-chatbot-container {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 9999;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -61,7 +61,7 @@
 .brandastic-chat-window {
   position: absolute;
   bottom: 70px;
-  right: 0;
+  left: 0;
   width: 380px;
   height: 500px;
   background: white;
@@ -292,7 +292,7 @@
   
   #brandastic-chatbot-container {
     bottom: 15px;
-    right: 15px;
+    left: 15px;
   }
   
   .brandastic-chat-button {
