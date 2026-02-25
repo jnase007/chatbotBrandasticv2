@@ -40,8 +40,7 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
           </svg>
-          <div class="brandastic-notification-badge"></div>
-        </button>
+                  </button>
         
         <div class="brandastic-chat-window" id="brandastic-chat-window">
           <div class="brandastic-chat-header">
@@ -132,16 +131,14 @@
       const toggleButton = document.getElementById('brandastic-chat-toggle');
       const chatWindow = document.getElementById('brandastic-chat-window');
       const messageInput = document.getElementById('brandastic-message-input');
-      const badge = document.querySelector('.brandastic-notification-badge');
-      
+            
       this.isOpen = !this.isOpen;
       toggleButton.classList.toggle('open', this.isOpen);
       chatWindow.classList.toggle('open', this.isOpen);
       
       if (this.isOpen) {
         messageInput.focus();
-        if (badge) badge.style.display = 'none';
-      }
+              }
     },
     
     sendMessage: async function() {
@@ -243,20 +240,8 @@
       return div.innerHTML;
     },
     
-    showNotification: function() {
-      const badge = document.querySelector('.brandastic-notification-badge');
-      if (badge && !this.isOpen) {
-        badge.style.display = 'block';
-      }
-    },
-    
-    hideNotification: function() {
-      const badge = document.querySelector('.brandastic-notification-badge');
-      if (badge) {
-        badge.style.display = 'none';
-      }
-    },
-    
+        
+        
     // Public API methods
     open: function() {
       if (!this.isOpen) {
