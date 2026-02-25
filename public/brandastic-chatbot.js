@@ -183,7 +183,7 @@
       } catch (error) {
         console.error('Chat error:', error);
         this.hideTyping();
-        this.addMessage("I'm having trouble connecting right now, but I'd love to help! Please call us at (555) 123-4567 or email info@brandastic.com", true, 'book_call');
+        this.addMessage("I'm having trouble connecting right now, but I'd love to help! Please call us at (949) 617-2731 or email info@brandastic.com", true, 'book_call');
       } finally {
         sendButton.disabled = false;
       }
