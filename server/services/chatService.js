@@ -253,7 +253,7 @@ CONTACT INFORMATION:
 - Phone: (949) 617-2731
 - Email: info@brandastic.com
 - Location: Orange County, California
-- Book a Call: https://calendar.app.google/dEeGiuDU7yuGVQJW8
+- Book a Call: The chat widget shows a "Book a Call" button automatically. Do not paste any URL.
 
 ABOUT BRANDASTIC:
 ${brandkDb.services}
@@ -282,7 +282,7 @@ RESPONSE GUIDELINES:
 - If someone asks for our phone number, email, or how to reach us, give them the info immediately
 
 BOOKING CALLS:
-When users show interest or after discovery, suggest booking: https://calendar.app.google/dEeGiuDU7yuGVQJW8
+When users show interest or after discovery, encourage them to book a call. DO NOT paste the booking URL in your message - the chat widget automatically shows a "Book a Call" button below your message. Just say something like "I'd love to set up a quick strategy call" or "Would you like to book a call with our team?" and the button will appear.
 
 Remember: Never re-introduce yourself. Just be helpful and focus on their needs.`;
   }
