@@ -309,3 +309,9 @@
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
+
+/* Move reCAPTCHA badge to bottom-left to avoid chatbot overlap */
+.grecaptcha-badge {
+  left: 4px !important;
+  right: auto !important;
+}
