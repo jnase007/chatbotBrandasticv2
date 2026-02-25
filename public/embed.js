@@ -109,16 +109,22 @@
           object-fit: cover;
         }
         
+        .brandastic-chat-info {
+          line-height: 1.2;
+        }
+        
         .brandastic-chat-info h3 {
           margin: 0;
           font-size: 16px;
           font-weight: 600;
+          line-height: 1.2;
         }
         
         .brandastic-chat-info p {
-          margin: 0;
+          margin: 1px 0 0 0;
           font-size: 12px;
           opacity: 0.9;
+          line-height: 1.2;
         }
         
         .brandastic-chat-messages {
@@ -294,7 +300,7 @@
           <div class="brandastic-chat-messages" id="brandastic-chat-messages">
             <div class="brandastic-message bot">
               <div class="brandastic-message-content">
-                Hi! I'm Brandi, and I'm here to help you explore how Brandastic can help grow your business. What type of business do you have, and what's your biggest challenge in attracting new customers right now?
+                Hey, I'm Brandi. How can I help you?
               </div>
             </div>
           </div>
@@ -374,7 +380,7 @@
         } catch (error) {
           console.error('Chat error:', error);
           hideTyping();
-          addMessage("I'm having trouble connecting right now, but I'd love to help! Please call us at (555) 123-4567 or email info@brandastic.com", true, 'book_call');
+          addMessage("I'm having trouble connecting right now, but I'd love to help! Please call us at (949) 617-2731 or email info@brandastic.com", true, 'book_call');
         } finally {
           sendButton.disabled = false;
         }

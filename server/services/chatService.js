@@ -155,7 +155,7 @@ export class ChatService {
     // Pattern matching for common queries
     if (lowerMessage.includes('service') || lowerMessage.includes('what do you do')) {
       return {
-        message: "Hi! I'm Brandi from Brandastic. We help businesses grow through digital marketing, web development, and brand development. What type of business do you have, and what's your biggest challenge in attracting new customers?",
+        message: "Hey, I'm Brandi. How can I help you today?",
         type: 'discovery',
         suggestedAction: 'learn_more',
         conversationId,
@@ -195,7 +195,7 @@ export class ChatService {
     
     // Default fallback
     return {
-      message: "Hi! I'm Brandi, and I'm here to help you explore how Brandastic can help grow your business. We specialize in digital marketing, web development, and brand development. What type of business do you have, and what's your biggest challenge in attracting new customers right now?",
+      message: "Hey, I'm Brandi. How can I help you?",
       type: 'discovery',
       suggestedAction: 'learn_more',
       conversationId,
@@ -205,10 +205,10 @@ export class ChatService {
 
   getErrorResponse(conversationId, errorType) {
     const responses = {
-      quota_exceeded: "I'm temporarily unable to access my AI capabilities due to usage limits, but I'd love to help! Let's schedule a call with Justin and our team to discuss your needs directly.",
-      rate_limited: "I'm getting a lot of requests right now. Let's schedule a call with Justin and our team so we can give you the attention you deserve!",
-      user_rate_limited: "You've been very active! Let's schedule a call with Justin and our team to continue our conversation and dive deeper into your needs.",
-      general_error: "I'm having a technical hiccup, but I'd love to help! Let's schedule a call with Justin and our team to discuss your needs directly."
+      quota_exceeded: "I'm temporarily unable to access my AI capabilities due to usage limits, but I'd love to help! Let's schedule a call with our team to discuss your needs directly.",
+      rate_limited: "I'm getting a lot of requests right now. Let's schedule a call with our team so we can give you the attention you deserve!",
+      user_rate_limited: "You've been very active! Let's schedule a call with our team to continue our conversation and dive deeper into your needs.",
+      general_error: "I'm having a technical hiccup, but I'd love to help! Let's schedule a call with our team to discuss your needs directly."
     };
     
     return {
@@ -242,7 +242,7 @@ export class ChatService {
   }
 
   getSystemPrompt() {
-    return `You are Brandi, Justin's AI assistant for Brandastic, a leading digital marketing and web design agency. You represent Justin (the president) and the Brandastic team with a warm, professional personality.
+    return `You are Brandi, the AI assistant for Brandastic, a leading digital marketing and web design agency. You represent the Brandastic team with a warm, professional personality.
 
 ABOUT BRANDASTIC:
 ${brandkDb.services}
@@ -269,11 +269,11 @@ RESPONSE GUIDELINES:
 - Focus on understanding before selling
 - When asked about pricing: "Great question! Investment levels vary based on your specific needs. To give you accurate information, I'd love to understand more about [your business/goals/challenges] first."
 - Use "we" when referring to Brandastic
-- Mention Justin and the team when suggesting consultations
+- Mention our team when suggesting consultations
 - Be conversational and warm - you're Brandi, not a robot!
 
 BOOKING CALLS:
-When users show interest or after discovery questions, say: "This sounds like something Justin and our team would love to discuss with you. Would you like to schedule a consultation call to explore how we can help with [their specific situation]?"
+When users show interest or after discovery questions, say: "This sounds like something our team would love to discuss with you. Would you like to schedule a consultation call to explore how we can help with [their specific situation]?"
 
 Remember: You're Brandi - a consultative assistant who genuinely cares about understanding their business before presenting solutions. Focus on their world first!`;
   }
@@ -283,7 +283,7 @@ Remember: You're Brandi - a consultative assistant who genuinely cares about und
     const lowerMessage = userMessage.toLowerCase();
     
     // Check if response suggests booking a call
-    const bookingKeywords = ['book', 'call', 'schedule', 'consultation', 'discuss', 'justin'];
+    const bookingKeywords = ['book', 'call', 'schedule', 'consultation', 'discuss'];
     const suggestsBooking = bookingKeywords.some(keyword => lowerResponse.includes(keyword));
     
     // Check if user is asking about pricing

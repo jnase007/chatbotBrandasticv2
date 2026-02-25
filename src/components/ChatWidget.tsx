@@ -29,7 +29,7 @@ export const ChatWidget: React.FC = () => {
     if (isOpen && messages.length === 0) {
       const welcomeMessage: Message = {
         id: 'welcome',
-        text: "Hi! I'm Brandi, and I'm here to help you explore how Brandastic can help grow your business. What type of business do you have, and what's your biggest challenge in attracting new customers right now?",
+        text: "Hey, I'm Brandi. How can I help you?",
         isBot: true,
         timestamp: new Date(),
         type: 'discovery'
@@ -181,9 +181,9 @@ export const ChatWidget: React.FC = () => {
                   <MessageCircle size={16} />
                 </div>
               </div>
-              <div>
+              <div className="leading-tight">
                 <h3 className="font-semibold">Brandi</h3>
-                <p className="text-xs opacity-90">Brandastic Assistant</p>
+                <p className="text-xs opacity-90 mt-0.5">Brandastic Assistant</p>
               </div>
             </div>
             <button

@@ -88,16 +88,22 @@
   object-fit: cover;
 }
 
+.brandastic-chat-info {
+  line-height: 1.2;
+}
+
 .brandastic-chat-info h3 {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .brandastic-chat-info p {
-  margin: 0;
+  margin: 1px 0 0 0;
   font-size: 12px;
   opacity: 0.9;
+  line-height: 1.2;
 }
 
 .brandastic-chat-messages {

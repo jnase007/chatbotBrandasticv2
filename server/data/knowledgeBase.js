@@ -78,7 +78,7 @@ INDUSTRIES WE SERVE:
     
     "budget": "Budget is definitely important to discuss! Different services have different investment levels, and we want to make sure we're aligned. What type of project are you considering? And what's driving this need for your business right now?",
     
-    "consultation": "Absolutely! A consultation with Justin and our team is the best way to understand your needs and explore how we can help. What's the main challenge or opportunity you'd like to discuss? This helps us prepare for our conversation.",
+    "consultation": "Absolutely! A consultation with our team is the best way to understand your needs and explore how we can help. What's the main challenge or opportunity you'd like to discuss? This helps us prepare for our conversation.",
     
     "about brandastic": "Brandastic is a full-service digital marketing and web design agency. We work with businesses across many industries to drive growth through strategic marketing, high-converting websites, and strong brand development. What type of business do you have? I'd love to learn more about your goals.",
     

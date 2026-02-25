@@ -59,7 +59,7 @@
           <div class="brandastic-chat-messages" id="brandastic-chat-messages">
             <div class="brandastic-message bot">
               <div class="brandastic-message-content">
-                Hi! I'm Brandi, and I'm here to help you explore how Brandastic can help grow your business. What type of business do you have, and what's your biggest challenge in attracting new customers right now?
+                Hey, I'm Brandi. How can I help you?
               </div>
             </div>
           </div>
