@@ -3,7 +3,7 @@
   
   // Configuration
   const CHATBOT_CONFIG = {
-    apiUrl: 'https://brandastic.com/chatbot-api',
+    apiUrl: 'https://chatbot-api-production-0ad3.up.railway.app',
     containerId: 'brandastic-chatbot-container',
     version: '1.0.0',
     googleCalendarUrl: 'https://calendar.app.google/dEeGiuDU7yuGVQJW8'
