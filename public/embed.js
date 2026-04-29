@@ -3,7 +3,7 @@
   
   // Configuration
   const CHATBOT_CONFIG = {
-    apiUrl: 'https://brandastic.com/chatbot-api', // Your brandastic.com server API endpoint
+    apiUrl: 'https://brandasticchatbot.netlify.app', // Netlify Functions API endpoint
     containerId: 'brandastic-chatbot-container',
     version: '1.0.0'
   };
@@ -357,7 +357,7 @@
         showTyping();
         
         try {
-          const response = await fetch(CHATBOT_CONFIG.apiUrl + '/api/chat/message', {
+          const response = await fetch(CHATBOT_CONFIG.apiUrl + '/.netlify/functions/chat', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

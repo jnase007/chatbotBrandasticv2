@@ -3,7 +3,7 @@
   
   // Configuration
   const CHATBOT_CONFIG = {
-    apiUrl: 'https://chatbot-api-production-0ad3.up.railway.app',
+    apiUrl: 'https://brandasticchatbot.netlify.app',
     containerId: 'brandastic-chatbot-container',
     version: '1.0.0',
     googleCalendarUrl: 'https://calendar.app.google/dEeGiuDU7yuGVQJW8'
@@ -157,7 +157,7 @@
       this.showTyping();
       
       try {
-        const response = await fetch(CHATBOT_CONFIG.apiUrl + '/api/chat/message', {
+        const response = await fetch(CHATBOT_CONFIG.apiUrl + '/.netlify/functions/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
