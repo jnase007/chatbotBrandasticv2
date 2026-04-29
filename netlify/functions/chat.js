@@ -138,7 +138,7 @@ export const handler = async (event) => {
     };
 
   } catch (error) {
-    console.error('Chat function error:', error);
+    console.error("Chat error:", error.message, error.status);
     
     return {
       statusCode: 500,
@@ -146,6 +146,7 @@ export const handler = async (event) => {
       body: JSON.stringify({
         message: "I'm having a technical hiccup, but I'd love to help! Let's schedule a call with our team to discuss your needs directly.",
         type: 'error',
+        debug: error.message,
         suggestedAction: 'book_call',
         timestamp: new Date().toISOString(),
       })
